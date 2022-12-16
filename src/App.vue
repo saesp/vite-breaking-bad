@@ -21,12 +21,12 @@ export default {
     getCharacters() {
       axios
         .get(store.apiURL)
-        .them(res => {
-          store.characterList = res.data.results;
-        })
-        .catch(err => {
-          console.log("Errori", err);
-        });
+      // .them(res => {
+      //   store.characterList = res.data.results;
+      // })
+      // .catch(err => {
+      //   console.log("Errori", err);
+      // });
     }
   },
 

@@ -19,7 +19,7 @@ export default {
 <template>
     <header class="container">
         <div class="row">
-            <div v-for="character in store.characterList" :key="character">
+            <div v-for="character in store.characterList" :key="character.id">
                 <SingleCharacter :info="character" />
             </div>
         </div>
