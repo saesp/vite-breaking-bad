@@ -1,12 +1,28 @@
-<script setup>
+<script>
+import SingleCharacter from './SingleCharacter.vue'
+import { store } from '../store.js'
 
+export default {
+    name: "Characters",
+    components: {
+        SingleCharacter,
+    },
+
+    data() {
+        return {
+            store,
+        }
+    },
+}
 </script>
 
 <template>
     <header class="container">
-        <h1 class="text-center my-5">
-            Ciao
-        </h1>
+        <div class="row">
+            <div v-for="character in store.characterList" :key="character">
+                <SingleCharacter :info="character" />
+            </div>
+        </div>
     </header>
 </template>
 
