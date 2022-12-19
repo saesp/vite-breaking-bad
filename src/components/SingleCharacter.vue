@@ -8,6 +8,7 @@ export default {
 <template>
   <div class="character">
     <img :src="info.image" alt="">
+    <div>{{ info.id }}</div>
   </div>
 </template>
 
