@@ -21,12 +21,12 @@ export default {
     getCharacters() {
       axios
         .get(store.apiURL)
-      // .them(res => {
-      //   store.characterList = res.data.results;
-      // })
-      // .catch(err => {
-      //   console.log("Errori", err);
-      // });
+        .then(res => {
+          store.characterList = res.data.results;
+        })
+        .catch(err => {
+          console.log("Errori", err);
+        });
     }
   },
 
@@ -45,5 +45,5 @@ export default {
 </template>
 
 <style lang="scss">
-@use './style/general.scss'
+// @use './style/general.scss'
 </style>
