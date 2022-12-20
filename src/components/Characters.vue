@@ -18,6 +18,8 @@ export default {
 
 <template>
     <header class="container">
+        <input placeholder="Cerca" @keyup="$emit('search')" @keydown="$emit('search')" @keyup.enter="$emit('search')"
+            v-model="store.valueSearch" type="search"></input>
         <div class="row">
             <div v-for="character in store.characterList" :key="character.id">
                 <SingleCharacter :info="character" />
